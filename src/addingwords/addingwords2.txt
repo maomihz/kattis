@@ -1,0 +1,9 @@
+calc cat =
+def cat 1
+def dog 2
+def pig 3
+calc cat + dog =
+def pig 4
+calc cat + dog =
+def cat 2
+calc cat + dog = 
