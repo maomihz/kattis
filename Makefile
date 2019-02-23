@@ -20,7 +20,7 @@ all: $(EXES)
 	bash -c "touch src/$*/$*{1..9}.txt"
 
 %: %.cpp
-	[ -f $< ] && $(CXX) $(CXXFLAGS) -o $@ $< || true
+	[ -f $< ] && $(CXX) $(CXXFLAGS) -o $@ $<
 
 run%: %
 	@./$<
@@ -32,6 +32,8 @@ test%: %
 			./$< < $$t; \
 		fi; \
 	done
+rm%:
+	$(RM) -r src/$*
 
 clean:
 	$(RM) $(EXES)
