@@ -5,6 +5,8 @@ VPATH = $(subst $() $(),:,$(dir $(SRCS)))
 CXX = g++
 CXXFLAGS = -g -std=c++11
 
+SHELL = /bin/bash
+
 .PHONY: clean
 
 .SUFFIXES:
@@ -15,9 +17,7 @@ CXXFLAGS = -g -std=c++11
 all: $(EXES)
 
 %.cpp:
-	mkdir -p src/$*
-	cp --no-clobber template.h src/$*/$@
-	bash -c "touch src/$*/$*{1..9}.txt"
+	@./test.sh +$*
 
 %: %.cpp
 	[ -f $< ] && $(CXX) $(CXXFLAGS) -o $@ $<
@@ -26,12 +26,11 @@ run%: %
 	@./$<
 
 test%: %
-	@for t in src/$*/$**.txt; do \
-		if [ -s $$t ]; then \
-			echo "\n\n\e[36m=** $${t##*/} **=\e[0m"; \
-			./$< < $$t; \
-		fi; \
-	done
+	@./test.sh $<
+
+test2%: %
+	@./test.sh $< 2>/dev/null
+
 rm%:
 	$(RM) -r src/$*
 

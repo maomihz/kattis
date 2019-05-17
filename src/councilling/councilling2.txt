@@ -1,0 +1,27 @@
+5
+2
+resident1 party1 2 club1 club2
+resident2 party2 2 club1 club2
+4
+resident1 party1 2 club1 club2
+resident2 party2 3 club1 club2 club4
+resident3 party3 2 club3 club4
+resident4 party4 2 club3 club4
+6
+resident1 party1 3 club1 club2 club6
+resident2 party2 3 club1 club2 club4
+resident3 party3 2 club3 club4
+resident4 party4 2 club3 club4
+resident5 party4 4 club2 club3 club4 club5
+resident6 party5 1 club5
+4
+fred dinosaur 2 jets jetsons
+john rhinocerous 2 jets rockets
+mary rhinocerous 2 jetsons rockets
+ruth platypus 1 rockets
+4
+fred dinosaur 2 jets jetsons
+john rhinocerous 2 jets rockets
+mary rhinocerous 2 jetsons rockets
+ruth platypus 1 rockets
+

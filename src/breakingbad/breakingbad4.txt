@@ -1,0 +1,21 @@
+5
+a
+b
+c
+d
+e
+4
+a b
+a c
+a d
+b e
+5
+a
+b
+c
+d
+e
+0
+1
+a
+0

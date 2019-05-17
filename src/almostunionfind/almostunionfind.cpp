@@ -206,6 +206,17 @@ public:
     }
 };
 
+
+
+struct MyUnionFind {
+    vector<int> p;
+    vector<int> rank;
+    MyUnionFind(int n) {
+        p.assign(n, 0);
+        rank.assign(n, 0);
+    }
+}
+
 int main() {
     while (true) {
         int n, m;

@@ -37,19 +37,20 @@ int lcs(string x, string y) {
 
 int sub(string x, string y) {
     int begin, end;
-    for (begin = 0; begin < x.size(); begin++) {
+    for (begin = 0; begin < x.size() && begin < y.size(); begin++) {
         if (x[begin] != y[begin]) {
             break;
         }
     }
-    for (int i = 1; y.size() - i >= begin; i++) {
+    
+    for (end = 0; end < x.size() - begin && end < y.size() - begin; end++) {
 //         cerr << x[x.size() - i] << ":" << y[(y.size() - i)] << endl;
-        if (x[x.size() - i] != y[end = (y.size() - i)]) {
+        if (x[x.size() - end - 1] != y[y.size() - end - 1]) {
             break;
         }
     }
 //     cerr << end << ":" << begin << endl;
-    return end - begin + 1;
+    return y.size() - end - begin;
 }
 
 int main() {
@@ -57,11 +58,12 @@ int main() {
 
     string x, y;
     while (cin >> x >> y) {
-        if (x.size() <= y.size()) {
-            cout << y.size() - lcs(x, y) << endl;
-        } else {
-            cout << sub(x, y) << endl;
-        }
+//         if (x.size() <= y.size()) {
+//             cout << y.size() - lcs(x, y) << endl;
+//         } else {
+//             cout << sub(x, y) << endl;
+//         }
+        cout << sub(x, y) << endl;
     }
     
     

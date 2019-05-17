@@ -1,0 +1,11 @@
+2 6
+abcdef
+aaaaaa
+2 6
+aaaaaa
+abcdef
+4 6
+marica
+mrvica
+mrvica
+mateja

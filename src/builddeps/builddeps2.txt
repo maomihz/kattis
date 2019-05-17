@@ -1,0 +1,11 @@
+9
+gmp:
+solution: set map queue
+base:
+set: base gmp
+map: base gmp
+queue: base
+cat: solution
+dog: solution
+pig: dog
+gmp
