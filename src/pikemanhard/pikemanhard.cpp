@@ -78,10 +78,13 @@ int main() {
             if (o > 0) {
                 n = min((T - sum) / i, o);
                 if (n == 0) break;
+                penalty = (penalty + sum * n) % 1000000007;
+                penalty = (penalty + i * (n + 1) * n / 2) % 1000000007;
                 
-                penalty = (penalty + sum * n + i * (n + 1) * n / 2) % 1000000007;
+//                 cerr << penalty << " " << sum << endl;
                 sum += (n * i) % 1000000007;
                 count += n;
+//                 cerr << i << "x" << n << endl;
                 if (n < o) break;
             }
         }
@@ -94,3 +97,8 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
